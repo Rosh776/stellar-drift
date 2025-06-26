@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Drift - Space Racing Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Animated Space Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <div id="game-container">
-        <div id="ui">
-            <div id="speedometer">SPEED: 0</div>
-            <div id="lap-counter">LAP: 0/3</div>
-            <div id="start-screen">
-                <h1>STELLAR DRIFT</h1>
-                <button id="start-btn">START RACE</button>
+    <!-- Custom Animated Cursor -->
+    <div class="cursor"></div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="3d-background"></canvas>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Explore the <span>Universe</span></h1>
+            <p class="hero-subtitle">Scroll to discover animated wonders</p>
+            <button class="cta-button">Launch Experience</button>
+        </section>
+
+        <!-- Animated Cards -->
+        <section class="cards-section">
+            <div class="card" data-speed="0.8">
+                <h2>Galactic Travel</h2>
+                <p>Journey through stars with smooth animations.</p>
             </div>
-        </div>
-        <canvas id="game-canvas"></canvas>
+            <div class="card" data-speed="0.6">
+                <h2>Cosmic Effects</h2>
+                <p>Interactive 3D particle backgrounds.</p>
+            </div>
+            <div class="card" data-speed="0.4">
+                <h2>Stellar UI</h2>
+                <p>Beautifully animated interfaces.</p>
+            </div>
+        </section>
+
+        <!-- Parallax Image Section -->
+        <section class="parallax-section">
+            <div class="parallax-image"></div>
+        </section>
     </div>
-    <script src="dist/main.bundle.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
